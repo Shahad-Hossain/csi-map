@@ -10,7 +10,7 @@ function updateDirectionLabels() {
   dpToLot.innerText = `🚗 Directions to ${lotNumber}`;
 }
 
-const onePCoords = "40.6015,-74.1486";
+const onePCoords = "40.59969,-74.1496471";
 
 const lots = {
   lot1: "Parking 1, 70 Lovell Ave, Staten Island, NY 10314",
