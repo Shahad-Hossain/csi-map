@@ -364,6 +364,13 @@ header img {
     z-index: 9999;
   }
 
+  #lot1 { top: 57%; left: 40%; }
+  #lot2 { top: 83%; left: 40%; }
+  #lot3 { top: 82%; left: 80%; }
+  #lot4 { top: 59%; left: 80%; }
+  #building1P { top: 66.9%; left: 53%; }
+
+
   .dp-title { font-size: 18px; }
   .dp-hint { font-size: 15px; }
 
@@ -381,7 +388,7 @@ header img {
   /* Keep map pins readable but not huge */
   .lot-button,
   .building-button {
-    font-size: 14px;
+    font-size: 12px;
     padding: 12px 14px;
   }
 
