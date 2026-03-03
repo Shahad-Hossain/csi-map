@@ -1,13 +1,14 @@
-// index.js
-// New clear UX:
-// - Clicking a lot SELECTS it (no surprise navigation)
-// - Directions panel provides explicit buttons:
-//    * Directions to Lot (driving)
-//    * Directions to 1P (walking) + animated curved path
-//    * Clear
-// - Clicking 1P:
-//    * If a lot is selected: routes from that lot -> 1P (walking) + animated path
-//    * Otherwise: current location -> 1P (walking)
+function updateDirectionLabels() {
+  if (!selectedLotId) {
+    dpTo1P.innerText = "📍 Directions to 1P";
+    dpToLot.innerText = "🚗 Directions to Lot";
+    return;
+  }
+
+  const lotNumber = selectedLotId.replace("lot", "Lot ");
+  dpTo1P.innerText = `📍 Directions to 1P from ${lotNumber}`;
+  dpToLot.innerText = `🚗 Directions to ${lotNumber}`;
+}
 
 const onePCoords = "40.6015,-74.1486";
 
@@ -66,6 +67,7 @@ function clearSelection() {
   document.querySelectorAll(".lot-button").forEach((b) => b.classList.remove("selected"));
   clearPath();
   setPanelState(false, "Select a parking lot", "Tip: Tap a parking lot, then choose where you want directions.");
+  updateDirectionLabels();
 }
 
 // --- Arrow alignment helpers ---
@@ -179,6 +181,7 @@ Object.keys(lots).forEach((lotId) => {
     lastTapTime = currentTime;
 
     selectedLotId = lotId;
+    updateDirectionLabels();
 
     document.querySelectorAll(".lot-button").forEach((b) => b.classList.remove("selected"));
     btn.classList.add("selected");
@@ -237,3 +240,5 @@ setPanelState(false, "Select a parking lot", "Tip: Tap a parking lot, then choos
 window.addEventListener("resize", () => {
   clearPath();
 });
+
+updateDirectionLabels();

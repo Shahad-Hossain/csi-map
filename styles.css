@@ -346,7 +346,7 @@ header img {
 
   /* Make space below the page so the fixed panel doesn't cover content */
   body {
-    padding-bottom: 170px; /* adjust if you change panel height */
+    padding-bottom: 150px; /* adjust if you change panel height */
   }
 
   /* Panel is big + readable, but no longer changes map-wrapper height */
