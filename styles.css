@@ -152,8 +152,10 @@ header img {
 }
 
 #lot4 {
-  top: 52.5%;
-  left: 83%;
+  top: 59.5%;
+  left: 84%;
+  background: linear-gradient(135deg, #FFD700, #FFD700);
+  color: black;
 }
 
 #building1P {
@@ -168,12 +170,12 @@ header img {
   color: black;
 }
 
-#lot6 {
+/* #lot6 {
   top: 59.5%;
   left: 84%;
   background: linear-gradient(135deg, #FFD700, #FFD700);
   color: black;
-}
+} */
 
 /* Directions Panel */
 
@@ -248,7 +250,6 @@ header img {
 /* Info Panel and Accordion */
 
 .info-panel {
-  margin-top: 25px;
   background: white;
   padding: 20px;
   border-radius: 12px;
@@ -422,7 +423,7 @@ header img {
   }
 
   #lot4 {
-    top: 57.4%;
+    top: 65%;
     left: 83.2%;
   }
 
@@ -483,11 +484,32 @@ header img {
     font-size: 10px;
   }
 
-  #lot5 {
+  #lot4 {
     left: 78%;
+  }
+
+  #lot5 {
+    left: 80.5%;
   }
 
   #lot6 {
     left: 78.5%;
+  }
+
+  .lot-button,
+  .building-button {
+    position: absolute;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 3px solid white;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+    will-change: transform;
   }
 }
