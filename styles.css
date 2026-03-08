@@ -464,3 +464,49 @@ header img {
     left: 78.5%;
   }
 }
+
+@media (max-width: 300px) {
+
+  .lot-button,
+  .building-button {
+    font-size: 6px;
+    padding: 3px 5px;
+    border-width: 1px;
+    border-radius: 12px;
+  }
+
+  #lot1 {
+    top: 60%;
+    left: 39%;
+  }
+
+  #lot2 {
+    top: 90%;
+    left: 41%;
+  }
+
+  #lot3 {
+    top: 87%;
+    left: 84%;
+  }
+
+  #lot4 {
+    top: 66%;
+    left: 80%;
+  }
+
+  #lot5 {
+    top: 76%;
+    left: 79%;
+  }
+
+  #lot6 {
+    top: 65%;
+    left: 79%;
+  }
+
+  #building1P {
+    top: 72%;
+    left: 58%;
+  }
+}
