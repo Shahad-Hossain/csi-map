@@ -5,9 +5,11 @@ function updateDirectionLabels() {
     return;
   }
 
-  const lotNumber = selectedLotId.replace("lot", "Lot ");
-  dpTo1P.innerText = `📍 Directions to 1P from ${lotNumber}`;
-  dpToLot.innerText = `🚗 Directions to ${lotNumber}`;
+  const lotButton = document.getElementById(selectedLotId);
+  const lotName = lotButton.textContent.replace("🅿️", "").trim();
+
+  dpTo1P.innerText = `📍 Directions to 1P from ${lotName}`;
+  dpToLot.innerText = `🚗 Directions to ${lotName}`;
 }
 
 const onePCoords = "40.59969,-74.1496471";
@@ -16,7 +18,9 @@ const lots = {
   lot1: "Parking 1, 70 Lovell Ave, Staten Island, NY 10314",
   lot2: "Parking 2, Staten Island, NY 10314",
   lot3: "Parking 3, Loop Rd, Staten Island, NY 10314",
-  lot4: "Parking 4, Loop Rd, Staten Island, NY 10314",
+  lot4: "40.60132, -74.14668",
+  lot5: "40.59901, -74.14682",
+  lot6: "40.60075, -74.14684"
 };
 
 let selectedLotId = null;
@@ -158,7 +162,7 @@ function openDirectionsOriginToDestination(origin, destination, travelmode = "wa
 }
 
 // Double tap detection (mobile-friendly)
-const doubleTapDelay = 300;
+const doubleTapDelay = 1000;
 let lastTapTime = 0;
 
 Object.keys(lots).forEach((lotId) => {
@@ -166,7 +170,6 @@ Object.keys(lots).forEach((lotId) => {
   if (!btn) return;
 
   btn.addEventListener("click", () => {
-
     const currentTime = new Date().getTime();
     const tapLength = currentTime - lastTapTime;
 
@@ -176,11 +179,10 @@ Object.keys(lots).forEach((lotId) => {
       lastTapTime = 0;
       return;
     }
-
-    // SINGLE TAP → Select only
+    
     lastTapTime = currentTime;
-
-    selectedLotId = lotId;
+    // SINGLE TAP → Select only
+    selectedLotId = lotId; 
     updateDirectionLabels();
 
     document.querySelectorAll(".lot-button").forEach((b) => b.classList.remove("selected"));
