@@ -162,7 +162,7 @@ function openDirectionsOriginToDestination(origin, destination, travelmode = "wa
 }
 
 // Double tap detection (mobile-friendly)
-const doubleTapDelay = 1000;
+const doubleTapDelay = 300;
 let lastTapTime = 0;
 
 Object.keys(lots).forEach((lotId) => {
