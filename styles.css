@@ -177,6 +177,11 @@ header img {
   color: black;
 } */
 
+#lot6 {
+  top: 62%;
+  left: 58%;
+}
+
 /* Directions Panel */
 
 .directions-panel {
@@ -421,8 +426,8 @@ header img {
   }
 
   #lot6 {
-    top: 64%;
-    left: 82%;
+    top: 68%;
+    left: 58%;
   }
 
   .lot-button,
@@ -460,8 +465,10 @@ header img {
     left: 80.5%;
   }
 
+
   #lot6 {
-    left: 78.5%;
+    top: 68%;
+    left: 58%;
   }
 }
 
