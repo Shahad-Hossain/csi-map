@@ -7,6 +7,7 @@ const lots = {
   lot4: "40.60075, -74.14684",
   lot5: "40.59901, -74.14682",
   lot6: "40.60037040321241, -74.14649686354696",
+  lot7: "40.60037040321241, -74.14649686354696"
 };
 
 const mapWrapper = document.getElementById("mapWrapper");
@@ -66,8 +67,14 @@ Object.keys(lots).forEach((lotId) => {
 
     if (lotId === "lot6") {
       alert(
-        "Warning: Google Maps does not directly navigate to the loading dock area or the disabled parking lot by the 1P building. After arriving, turn into the area, continue straight until you reach the 1P building, and then turn into the disabled parking lot/loading dock."
+        "Warning: Google Maps does not directly navigate to the accesible parking lot by the 1P building. After arriving, turn into the area, continue straight until you reach the 1P building, and then turn into the disabled parking lot"
       );
+    }
+
+    if (lotId === "lot7") {
+      alert(
+        "Warning: Google Maps does not provide direct navigation directions to the loading dock area. After arriving, turn into the area, and then continue straight until you reach the 1P building. NOTE: Please do not leave your car there as it blocks the area."
+      )
     }
 
     openDirectionsToDestination(lots[lotId], "driving");

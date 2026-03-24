@@ -182,6 +182,11 @@ header img {
   left: 58%;
 }
 
+#lot7 {
+  top: 59%;
+  left: 58%;
+}
+
 /* Directions Panel */
 
 .directions-panel {
@@ -430,6 +435,10 @@ header img {
     left: 58%;
   }
 
+  #lot7 {
+    top: 65%;
+  }
+
   .lot-button,
   .building-button {
     font-size: 9px;
@@ -508,8 +517,12 @@ header img {
   }
 
   #lot6 {
-    top: 65%;
-    left: 79%;
+    top: 68%;
+    left: 59%;
+  }
+
+  #lot7 {
+    top: 63.5%;
   }
 
   #building1P {
