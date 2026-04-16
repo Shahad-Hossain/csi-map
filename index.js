@@ -78,6 +78,12 @@ Object.keys(lots).forEach((lotId) => {
       )
     }
 
+    if (lotId === "lot4") {
+      alert(
+        "Warning: If you are coming in from the Victory BLVD entrance do not take the first right Google Maps says! Go until you see gravel at the lot closest to the 1N building."
+      );
+    }
+
     if (lotId === "lot8") {
       alert(
         "Warning: Google Maps does not provide direct navigation directions to the loading dock area. After arriving continue straight into the area. NOTE: THEATER OPERATIONS LOADING ZONE ONLY For Authorized Staff, Vendors & Performers"
